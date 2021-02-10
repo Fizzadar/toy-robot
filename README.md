@@ -69,3 +69,6 @@ All relevant tests
 Clone repo to your local machine, cd into the directiory and run "npm start". 
 Your browser will open and you can start entering commands! 
 First command must be: PLACE X,Y,F (example: PLACE,0,0,NORTH)
+
+# v2 happening here:
+https://github.com/pvahanian/ToyRobotv2
