@@ -2,9 +2,7 @@
 import { atom } from "recoil";
 
 //"Tell the robot what to do" state
-type Default = string;
-
-const initCommandState: Default = "";
+const initCommandState: string = "";
 
 export const commandInput = atom({
   key: "commandInput",
@@ -37,7 +35,7 @@ export const boardPosition = atom({
 
 //Robot direction state
 
-const initRobotFacingState: Default = "";
+const initRobotFacingState: string = "";
 
 export const robotFacingDirection = atom({
   key: "robotFacingDirection",
@@ -46,7 +44,7 @@ export const robotFacingDirection = atom({
 
 //Report state for robots current location
 
-const initConsoleReportState: Default = "";
+const initConsoleReportState: string = "";
 
 export const consoleReport = atom({
   key: "consoleReport",
