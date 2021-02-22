@@ -72,3 +72,4 @@ First command must be: PLACE X,Y,F (example: PLACE,0,0,NORTH)
 
 # v2 happening here:
 https://github.com/pvahanian/ToyRobotv2
+Why v2? Take 1 worked. The code? Ugly, unorganized and not DRY. We're taking a second go to see how much we can improve!
