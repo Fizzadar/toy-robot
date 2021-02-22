@@ -68,29 +68,33 @@ const Input: React.FC = () => {
   //useEffect - sets user input to state and handles robot control logic:
   useEffect(() => {
     //take user input command array and assign index values to new variables
-    let initInput: string = modifiedCommand[0];
-    let xAxisValue: any = modifiedCommand[1];
-    let yAxisValue: any = modifiedCommand[2];
-    let directionFacing: string = modifiedCommand[3];
+    const initInput: string = modifiedCommand[0];
+    const xAxisValue: string = modifiedCommand[1];
+    const yAxisValue: string = modifiedCommand[2];
+    const directionFacing: string = modifiedCommand[3];
+
+    const xValue = parseInt(xAxisValue);
+    const yValue = parseInt(yAxisValue);
 
     //Is the first command PLACE?
     if (initInput === "PLACE") {
       setRobotOnTheBoard(true);
     }
+
     if (robotOnTheBoard && newCommand) {
       //Switch statement that checks commands - logic to control errors and robots within each case:
       switch (initInput) {
         //place the robot on the board
         case "PLACE":
           if (
-            xAxisValue >= 0 &&
-            xAxisValue <= 4 &&
-            yAxisValue >= 0 &&
-            yAxisValue <= 4
+            xValue >= 0 &&
+            xValue <= 4 &&
+            yValue >= 0 &&
+            yValue <= 4
           ) {
             setBoardPositions({
-              x: parseInt(xAxisValue, 10),
-              y: parseInt(yAxisValue, 10),
+              x: xValue,
+              y: yValue,
             });
             setInitErrors(STAYSTHESAME.ERRORS.nextCommand);
             if (STAYSTHESAME.FACING_DIRECTIONS.includes(directionFacing)) {
